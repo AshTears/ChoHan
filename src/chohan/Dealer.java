@@ -1,7 +1,7 @@
 package chohan;
 
 /**
- *
+ * The Dealer class simulates a dealer in the game.
  * @author Ashika Shallow
  */
 public class Dealer {
@@ -34,7 +34,6 @@ public class Dealer {
 
     /**
      * The getChoOrHan method returns the result of the dice roll, Cho or Han
-     *
      * @return Either "Cho (even)" or "Han (odd)"
      */
     public String getChoOrHan() {
@@ -45,9 +44,9 @@ public class Dealer {
 
         // Determine even or odd.
         if (sum % 2 == 0) {
-            result = "Cho (even)";
+            result = "Cho";
         } else {
-            result = "Han (odd)";
+            result = "Han";
         }
 
         // Return the result
@@ -56,7 +55,6 @@ public class Dealer {
 
     /**
      * The getDie1Value method returns the value of die #1
-     *
      * @return The die1Value field
      */
     public int getDie1Value() {
@@ -65,7 +63,6 @@ public class Dealer {
 
     /**
      * The getDie2Value method returns the value of die #2
-     *
      * @return The die2Value field
      */
     public int getDie2Value() {

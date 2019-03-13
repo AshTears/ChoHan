@@ -3,8 +3,8 @@ package chohan;
 import java.util.Random;
 
 /**
- *
- * @author seval
+ * The Die class creates a die and rolls it.
+ * @author Ashika Shallow
  */
 public class Die {
 
@@ -13,7 +13,6 @@ public class Die {
 
     /**
      * The constructor performs an initial roll of the die.
-     *
      * @param numSides The number of sides for this dice
      */
     public Die(int numSides) {
@@ -34,7 +33,6 @@ public class Die {
 
     /**
      * getSides method
-     *
      * @return The number of sides for this die.
      */
     public int getSides() {
@@ -43,7 +41,6 @@ public class Die {
 
     /**
      * getValue method
-     *
      * @return The value of the die.
      */
     public int getValue() {

@@ -1,9 +1,7 @@
 package chohan;
 
-import java.util.Random;
-
 /**
- *
+ * The Player class establishes the player for a game.
  * @author Ashika Shallow
  */
 public class Player {
@@ -14,33 +12,12 @@ public class Player {
 
     /**
      * Constructor
-     *
      * @param playerName The player's name
      */
     public Player(String playerName) {
         name = playerName;
         guess = "";
         points = 0;
-    }
-
-    /**
-     * The makeGuess method causes the player to guess either "Cho (even)" or
-     * "Han(even)"
-     */
-    public void makeGuess() {
-        // Create a Random object
-        Random rand = new Random();
-
-        // Get a random number, either 0 or 1.
-        int guessNumber = rand.nextInt(2);
-
-        // Convert the random number to a guess of either "Cho (even)" or "Han (odd)"
-        if (guessNumber == 0) {
-            guess = "Cho (even)";
-        } else {
-            guess = "Han (odd)";
-        }
-
     }
 
     /**
@@ -54,8 +31,15 @@ public class Player {
     }
 
     /**
+     * The setGuess method specifies a player's choice
+     * @param playerGuess 
+     */
+    public void setGuess(String playerGuess){
+        guess = playerGuess;
+    }
+    
+    /**
      * The getName method returns the player's name
-     *
      * @return The value of the name field.
      */
     public String getName() {
@@ -64,7 +48,6 @@ public class Player {
 
     /**
      * The getGuess method returns the player's guess.
-     *
      * @return The value of the guess field.
      */
     public String getGuess() {
@@ -73,7 +56,6 @@ public class Player {
 
     /**
      * The getPoints method returns the player's points
-     *
      * @return The value of the points field.
      */
     public int getPoints() {
