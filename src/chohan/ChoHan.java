@@ -1,3 +1,11 @@
+/**
+ * ChoHan is a traditional Japanese gambling game using dice. The game uses two 
+ * standard six-sided dice, which are shaken in a bamboo cup or bowl by a dealer. 
+ * The cup is then overturned onto the floor. Players then place their wagers 
+ * on whether the sum total of numbers showing on the two dice will 
+ * be "Chō" (even) or "Han" (odd). The dealer then removes the cup, displaying the dice. 
+ * The winners collect their money.
+ */
 package chohan;
 
 import java.util.Random;
@@ -6,11 +14,12 @@ import java.util.Scanner;
 public class ChoHan {
 
     /**
+     * The game of ChoHan
      * @param args
      */
     public static void main(String[] args) {
         final int MAX_ROUNDS = 5;	// Number of rounds
-        String player1Name = "AIJohn";  // First player's name
+        String player1Name = "CompJohn";  // First player's name
         String player2Name;		// Second player's name
 
         // Create a Scanner object fort keyboard input.
@@ -22,7 +31,7 @@ public class ChoHan {
         System.out.println("We're playing a game of ChoHan. 'Cho' is even, 'Han' is odd");
 
         // Get the player's names.
-        System.out.println("Player 1: Jack");
+        System.out.println("Player 1: " + player1Name);
         System.out.print("Enter the second player's name: ");
         player2Name = kb.nextLine();
 
@@ -52,6 +61,7 @@ public class ChoHan {
             }
             
             // Player 2 makes a guess.
+            System.out.println("The Dealer rolled the dice.");
             System.out.println("Cho(even) or Han(odd)? ");
             String guess = kb.nextLine();
             player2.setGuess(guess);
@@ -67,7 +77,6 @@ public class ChoHan {
 
     /**
      * The roundResults method determines the results of the current round.
-     *
      * @param dealer The Dealer object
      * @param player1 Player #1 object
      * @param player2 Player #2 object
@@ -86,7 +95,6 @@ public class ChoHan {
     /**
      * The checkGuess method checks a player's guess against the Dealer's
      * result.
-     *
      * @param player The Player object to check.
      * @param dealer The Dealer object.
      */
@@ -107,7 +115,6 @@ public class ChoHan {
 
     /**
      * The displayGrandWinner method displays the game's grand winner.
-     *
      * @param player1 Player #1
      * @param player2 Player #2
      */
